@@ -1,0 +1,17 @@
+@media (max-width: 991px) {
+	.row {
+		flex-direction: column;
+	}
+	.img {
+		width: 60%;
+		margin-bottom: 10px;
+		order: -1;
+	}
+	.content .text {
+		width: 100%;
+		font-size: 16px;
+	}
+	.img-text {
+		font-size: 12px;
+	}
+}
