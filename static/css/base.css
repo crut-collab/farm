@@ -40,7 +40,7 @@ main {
 /* FOOTER */
 footer {
 /*	z-index: 1000;*/
-	background-color: rgba(255, 255, 255, .7);
+	background-color: rgba(255, 255, 255, .8);
 }
 
 /* TEXT */
@@ -57,13 +57,6 @@ footer {
 }
 .content .text {
 }
-.img-text {
-	color: black;
-	font-size: 20px;
-}
-.title {
-	color: white;
-}
 
 /* ICONS */
 .icon-logo {
@@ -76,14 +69,10 @@ footer {
 }
 .icon-profile {
 	width: 180px;
-	height: 120px;
+	height: 180px;
 }
 
 /* OTHERS */
-/* dropdown */
-.dropdown-toggle::after {
-	align-self: flex-end;
-}
 /* headline */
 .headline .bg-img {
 	position: relative;
@@ -94,22 +83,20 @@ footer {
 /*	background-attachment: fixed;*/
 	background-position: center;
 }
-.headline .bg-img:after {
+.headline .bg-img:before {
 	content: "";
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: rgba(0, 0, 0, 0.65);
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.65));
+	/*background: radial-gradient(circle, rgba(0, 0, 0, 0.15), rgba(0, 0, 0,0.65));*/
 	pointer-events: none;
 }
 .headline-title {
-	position: absolute;
-	align-items: center;
-	bottom: 20%;
-	left: 50%;
-	transform: translate(-50%, 0);
+	position: relative;
+	top: 60px;
 	z-index: 1;
 }
 /*  */
@@ -131,10 +118,14 @@ footer {
 	border-color: darkgray;
 }*/
 
+.no-focus-form input:focus {
+	outline: none;
+	box-shadow: none;
+}
 
 /* MEDIA */
-/* <= lg */
-@media (max-width: 1199.98px) {
+/* <= lg 992px*/
+@media (max-width: 991.98px) {
 	.icon-logo {
 		width: 80px;
 		height: 80px;
@@ -145,7 +136,10 @@ footer {
 	}
 	.icon-profile {
 		width: 100px;
-		height: 66px;
+		height: 100px;
+	}
+	.dropdown-toggle::after {
+		align-self: flex-end;
 	}
 }
 /* >= xl */

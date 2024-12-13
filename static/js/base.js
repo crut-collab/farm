@@ -2,7 +2,7 @@
 
 $(document).ready(function(){
 	// все иконки имеют .icon
-	$('.navbar-nav .nav-item div.menu-item').each(function() {
+	$('.navbar-nav .nav-item .menu-item').each(function() {
 		$(this).find('span.icon-fill').addClass('d-none');
 		$(this).find('span.icon').removeClass('d-none');
 	});
@@ -13,10 +13,10 @@ $(document).ready(function(){
 		};
 		let toFill;
 		if ($(this).hasClass('sub-menu-item')) {
-			toFill = [$(this).find('div.menu-item'), $(this).closest('ul.sub-menu').closest('div.menu-item')];
+			toFill = [$(this).find('.menu-item'), $(this).closest('ul.sub-menu').closest('.menu-item')];
 		}
 		else {
-			toFill = [$(this).find('div.menu-item')];
+			toFill = [$(this).find('.menu-item')];
 		};
 		toFill.forEach(function(tag) {
 			tag.find('span.icon-fill').removeClass('d-none');
