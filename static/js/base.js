@@ -1,6 +1,22 @@
 'use strict';
 
+function updateLogo() {
+	if ($(window).width() <= 1200) {
+		$("#logo").attr('src', logo2Dir).removeClass('logo-1').addClass('logo-2');
+	}
+	else {
+		$("#logo").attr('src', logo1Dir).removeClass('logo-2').addClass('logo-1');
+	};
+};
+// function pageLoaded() {
+// 	$("body").addClass('loaded');
+// };
+
+$(window).on('resize', updateLogo);
+// $(window).on('load', pageLoaded);
+
 $(document).ready(function(){
+	updateLogo();
 	// все иконки имеют .icon
 	$('.navbar-nav .nav-item .menu-item').each(function() {
 		$(this).find('span.icon-fill').addClass('d-none');
